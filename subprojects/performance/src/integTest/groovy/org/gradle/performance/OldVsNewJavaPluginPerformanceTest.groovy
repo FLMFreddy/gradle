@@ -40,19 +40,6 @@ class OldVsNewJavaPluginPerformanceTest extends AbstractCrossBuildPerformanceTes
                 tasksToRun(*tasks).useDaemon()
             }
         }
-        /*
-        TODO: enable after fixing model reuse
-        runner.buildSpec {
-            projectName("${size}NewJava").displayName("new plugin (reuse)").invocation {
-                tasksToRun(*tasks).useDaemon().enableModelReuse()
-            }
-        }
-        runner.buildSpec {
-            projectName("${size}NewJava").displayName("new plugin (reuse + tooling api)").invocation {
-                tasksToRun(*tasks).useToolingApi().enableModelReuse()
-            }
-        }
-        */
         runner.buildSpec {
             projectName("${size}NewJava").displayName("new plugin (no client logging)").invocation {
                 tasksToRun(*tasks).useDaemon().disableDaemonLogging()
