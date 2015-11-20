@@ -54,7 +54,7 @@ class RegistrySpec extends Specification {
         }
 
         @Override
-        def <T> ModelView<? extends T> asMutable(ModelType<T> type, ModelRuleDescriptor ruleDescriptor, List<ModelView<?>> implicitDependencies) {
+        def <T> ModelView<? extends T> asMutable(ModelType<T> type, ModelRuleDescriptor ruleDescriptor) {
             return null
         }
 
